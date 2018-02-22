@@ -48,10 +48,12 @@ export default {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  background-color: #ACE3B1;
+  /* background-color: #ACE3B1; */
+  background-color: #bce8c0;
 }
 .navigation {
-  background-color: #D45B58;
+  /* background-color: #D45B58; */
+  background-color: #d77a7c;
   border-radius: 5px;
 }
 </style>
