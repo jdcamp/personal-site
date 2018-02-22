@@ -12,9 +12,15 @@
   </svg>
 </div>
   <div class="navbar">
-      <h4>Home</h4>
-      <h4>Experience</h4>
-      <h4>About</h4>
+      <router-link :to="{path: '/'}" replace>
+        <h4>Home</h4>
+      </router-link>
+      <router-link :to="{path: '/Experience'}" replace>
+        <h4>Experience</h4>
+      </router-link>
+      <router-link :to="{path: '/About'}" replace>
+        <h4>About</h4>
+      </router-link>
   </div>
 </div>
 </template>
