@@ -29,9 +29,9 @@ export default {
   /* background-color: #54A2B7; */
   /* background-color: #76b4c5; */
   /* background-color: #d77a7c; */
-  margin: 0px;
 }
 body {
-  background-color: #272727;
+  /* background-color: #272727; */
+  background-color: whitesmoke;
 }
 </style>

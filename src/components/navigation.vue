@@ -822,7 +822,10 @@ import anime from 'animejs'
   color: whitesmoke;
   text-align: center;
 }
-
+.navbar h4 {
+  width: 10em;
+  text-align: center;
+}
 .navbar {
   /* -moz-box-shadow: inset 0px 0 10px 0px #000000;
   -webkit-box-shadow: inset 0px 0 10px 0px #000000;
@@ -837,6 +840,7 @@ import anime from 'animejs'
 
 .navbar h4 {
   border: solid 2px red;
+  height: 35px;
 }
 
 .navigation {
@@ -848,6 +852,7 @@ import anime from 'animejs'
   flex-direction: column;
   align-content: center;
   height: 98vh;
+  width: inherit;
 }
 
 #site-title {

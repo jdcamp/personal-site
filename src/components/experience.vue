@@ -75,7 +75,7 @@ export default {
         "title": "Accounting Technician",
         "company": "KCK Inc.",
         "date": "November 2013 - January 2018",
-        "deck": "Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus.",
+        "deck": "",
         "img": require("../assets/kck_logo.png"),
         tags: ['Excel']
       }, {
