@@ -828,8 +828,8 @@ import anime from 'animejs'
 }
 
 .navbar h4 {
-  border: solid 2px red;
   height: 35px;
+  font-style: normal;
 }
 
 .navigation {
@@ -840,7 +840,7 @@ import anime from 'animejs'
   display: flex;
   flex-direction: column;
   align-content: center;
-  height: 98vh;
+  height: 96vh;
   width: inherit;
 }
 
