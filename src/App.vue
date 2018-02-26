@@ -1,19 +1,32 @@
 <template>
   <div id="app">
     <navigation></navigation>
-    <router-view></router-view>
+    <home></home>
+    <experience></experience>
+    <about></about>
     <bottom></bottom>
   </div>
 </template>
 
 <script>
 import navigation from './components/navigation'
+import home from './components/home'
+import experience from './components/experience'
+import about from './components/about'
 import bottom from './components/bottom'
+import AOS from 'aos'
+
 export default {
+  created() {
+    AOS.init()
+  },
   name: 'App',
   components:{
     navigation,
-    bottom
+    bottom,
+    about,
+    experience,
+    home,
   }
 }
 </script>

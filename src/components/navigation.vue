@@ -5,19 +5,8 @@
       {{ createGrid(movePixels) }}
     </div>
   </div>
-  <!-- <div class="personal-image">
-
-    <svg id="image-fill" xmlns="http://www.w3.org/2000/svg" version="1.1" height="300" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-     <pattern id="image-bg" x="0" y="0" height="300" width="300" patternUnits="userSpaceOnUse">
-       <image width="300" height="300" xlink:href="https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAA0OAAAAJDEzYWFiZGMzLTcwNTItNGNhYS1hMzI2LTRjMjU0YTY2Nzc3Mg.jpg"></image>
-    </pattern>
-    </defs>
-    <polygon class="hex" stroke-linecap="butt" points="300,150 225,280 75,280 0,150 75,20 225,20" fill="url('#image-bg')"></polygon>
-  </svg>
-  </div> -->
   <div class="intro">
-    <p id='intro-deck'>Hello, my name is Jake Campa. I am a software engineer living in Portland Oregon. I like to <span class="pink-accent">build</span>, <span class="teal-accent">create</span>, <span class="green-accent">break</span> and <span class="red-accent">fix</span> code.</p>
+    <p id='intro-deck'>Hello, my name is Jake Campa. I am a software engineer living in Portland, Oregon. I like to <span class="pink-accent">build</span>, <span class="teal-accent">create</span>, <span class="green-accent">break</span> and <span class="red-accent">fix</span> code.</p>
   </div>
   <div class="navbar">
     <router-link :to="{path: '/'}" replace>
@@ -777,21 +766,21 @@ export default {
         let pY2 = coordinates[cor].y2
         let xOffset = parseInt(cor.substring(1, 2))
         let yOffset = parseInt(cor.substring(2, 3))
-        let delay1 = 5000
+        let delay1 = 3000
         let duration1 = 5000
         let startingColor= coordinates[cor].color
         let pixel = '.' + cor
         anime({
           targets: pixel,
           translateX: [
-            {value:15 * (pX1 - xOffset)-18*15, duration: duration1, delay: delay1, elasticity: function() {return anime.random(50, 300)}},
-            {value:15 * (pX2 - xOffset)-4*15, duration: duration1, delay: delay1, elasticity: function() {return anime.random(50, 300)}},
+            {value:15 * (pX1 - xOffset)-18*15, duration: duration1, delay: delay1, elasticity: function() {return anime.random(50, 200)}},
+            {value:15 * (pX2 - xOffset)-4*15, duration: duration1, delay: delay1, elasticity: function() {return anime.random(50, 200)}},
           ],
           translateY: [
-            {value: 15 * (pY1 - yOffset), duration: duration1, delay: delay1, elasticity: 100},
-            {value: 15 * (pY2 -yOffset), duration: duration1, delay: delay1, elasticity: 100},
+            {value: 15 * (pY1 - yOffset), duration: duration1, delay: delay1, elasticity: function() {return anime.random(50, 200)}},
+            {value: 15 * (pY2 -yOffset), duration: duration1, delay: delay1, elasticity: function() {return anime.random(50, 200)}},
           ],
-          backgroundColor: [startingColor, '#000','#40814A'],
+          backgroundColor: [startingColor, '#FFF','#40814A'],
           duration: (duration1 +delay1)*2,
           // delay: function() {return anime.random(890,1600);},
           // duration: function() {return anime.random(2000,7000);},
