@@ -1,6 +1,6 @@
 <template>
 <div class="experience">
-  <h2>Professional Experience</h2>
+  <h2  v-on:click='animes()'>Professional Experience</h2>
   <div class="job-section">
     <div class="card" v-for="job in jobs">
       <div class="job">
@@ -41,10 +41,35 @@
 </template>
 
 <script>
+import anime from 'animejs'
 export default {
-  name: 'experience',
+  methods: {
+    // animes: function(e) {
+    //   alert('working')
+    // }
+      animes: function() {
+        let el = document.querySelectorAll('.job')
+        anime({
+        targets: el,
+        translateX: [{
+          value: 100,
+          duration: 1200
+        },
+        {
+          value: 0,
+          duration: 800
+        }
+      ],
+      rotate: '1turn',
+      backgroundColor: '#FFF',
+      duration: 2000,
+      loop: true
+    })
+  }
+  },
   data() {
     return {
+      name: 'experience',
       jobs: [{
         "id": 1,
         "title": "Accounting Technician",
@@ -91,22 +116,22 @@ export default {
         "img": "http://dummyimage.com/149x120.png/ff4444/ffffff"
       }],
       education: [{
-        id: 1,
-        title: 'JavaScript/PHP Track',
-        school: 'Epicodus',
-        date: '1-1-1',
-        deck: 'jkfga jdkjfgj j joifjgoidfjgaerg ergekgeirgef frgepodfin sksdn vdnxdn cvnxohn iuhbiuhn in isnfj nsdk nsd, nsduh so osij osidh lisyguydb aousidv iusyobv iyctvugb ytxdrctuvybuyvtdrx yubictruvbivtcfuvbtcruvibvtcf t byuiv vy vy vygu yguv v vygu viuyb ud biudcb ihbdbj d  dfvnhdfc nv  rf dfhnvc jnvdn df vdfijnd d',
-        img: 'http://dummyimage.com/149x120.png/ff4444/ffffff'
-      },
-      {
-        id: 2,
-        title: 'A.S., Computer Science',
-        school: 'Northern Virginia Community College',
-        date: '1-1-1',
-        deck: 'Couse work in datastructures, algorithms, object oriented programming and computer architecture',
-        img: 'http://dummyimage.com/149x120.png/ff4444/ffffff'
-      },
-    ]
+          id: 1,
+          title: 'JavaScript/PHP Track',
+          school: 'Epicodus',
+          date: '1-1-1',
+          deck: 'jkfga jdkjfgj j joifjgoidfjgaerg ergekgeirgef frgepodfin sksdn vdnxdn cvnxohn iuhbiuhn in isnfj nsdk nsd, nsduh so osij osidh lisyguydb aousidv iusyobv iyctvugb ytxdrctuvybuyvtdrx yubictruvbivtcfuvbtcruvibvtcf t byuiv vy vy vygu yguv v vygu viuyb ud biudcb ihbdbj d  dfvnhdfc nv  rf dfhnvc jnvdn df vdfijnd d',
+          img: 'http://dummyimage.com/149x120.png/ff4444/ffffff'
+        },
+        {
+          id: 2,
+          title: 'A.S., Computer Science',
+          school: 'Northern Virginia Community College',
+          date: '1-1-1',
+          deck: 'Couse work in datastructures, algorithms, object oriented programming and computer architecture',
+          img: 'http://dummyimage.com/149x120.png/ff4444/ffffff'
+        },
+      ]
     }
   }
 }
@@ -134,25 +159,30 @@ export default {
   display: flex;
   /* justify-content: space-between; */
 }
+
 .mode1 {
   display: flex;
   flex-direction: row;
   align-items: stretch;
 }
-.mode0 .deck{
+
+.mode0 .deck {
   display: flex;
   flex-direction: row;
   order: 99;
 }
-.lower-card{
+
+.lower-card {
   align-items: stretch;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .job {
   padding: 15px;
 }
+
 .logo {
   height: 150px;
 }

@@ -28,16 +28,21 @@ export default {
 <style scoped>
 .footer {
   /* background-color: #396D74; */
-  background-color: #608a8f;
+  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
+  width: 70%;
+  margin: auto;
 }
+
 .social {
   align-self: center;
 }
+
 .social img {
   height: 45px;
 }
+
 .sitemap {
   align-self: center;
 }

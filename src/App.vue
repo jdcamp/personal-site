@@ -20,14 +20,18 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
+  /* font-family: 'Avenir', Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   /* background-color: #54A2B7; */
-  background-color: #76b4c5;
+  /* background-color: #76b4c5; */
   /* background-color: #d77a7c; */
   margin: 0px;
-  border-radius: 5px
+}
+body {
+  background-color: #272727;
 }
 </style>
