@@ -6,10 +6,9 @@ import router from './router'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Sticky from 'sticky-js'
-import VueScrollTo from 'vue-scrollto'
-
+import vueScrollto from 'vue-scrollto'
 Vue.config.productionTip = false
-
+Vue.use(vueScrollto)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -17,5 +16,4 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
-
 Vue.dire

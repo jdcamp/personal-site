@@ -19,7 +19,7 @@ import Sticky from 'sticky-js'
 
 export default {
   created() {
-    AOS.init()
+    AOS.init();
   },
   name: 'App',
   components:{

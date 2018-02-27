@@ -8,40 +8,22 @@
   <div class="intro">
     <p id='intro-deck'>Hello, my name is Jake Campa. I am a software engineer living in Portland, Oregon. I like to <span class="pink-accent">build</span>, <span class="teal-accent">create</span>, <span class="green-accent">break</span> and <span class="red-accent">fix</span> code.</p>
   </div>
-  <div class="navbar">
-      <h4  v-scroll-to='"#grid"'>Home</h4>
-      <h4>Experience</h4>
-      <h4>About</h4>
+  <div class="navbar" data-sticky-wrap='false'>
+      <h4 v-scroll-to="'#grid'">Home</h4>
+      <h4 v-scroll-to="'#experience'">Experience</h4>
+      <h4 v-scroll-to="'#about'">About</h4>
   </div>
 </div>
 </template>
 
 <script>
 import Sticky from 'sticky-js';
-import VueScrollTo from 'vue-scrollto'
 export default {
   mounted() {
     var sticky = new Sticky('.navbar');
-    var VueScrollTo = require('vue-scrollto');
-
-    var options = {
-    container: '#container',
-    easing: 'ease-in',
-    offset: -60,
-    cancelable: true,
-    onDone: function() {
-      // scrolling is done
-    },
-    onCancel: function() {
-      // scrolling has been interrupted
-    },
-    x: false,
-    y: true
-}
-var cancelScroll = VueScrollTo.scrollTo(element, duration, options)
   },
   ///////////////////
-  // Testing of the name animation using anime js block of condimentum
+  // Animation
   ///////////////////
   methods: {
     createGrid: function(callback) {
@@ -832,6 +814,10 @@ import anime from 'animejs'
   font-style: normal;
   padding-bottom: 15px;
 }
+.navbar h4:hover {
+  cursor: pointer;
+  color: #5AE8FD
+}
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -839,7 +825,7 @@ import anime from 'animejs'
   /* background-color: #ACE3B1; */
   /* background-color: #bce8c0; */
   font-size: 2rem;
-  background-color: inherit;
+  background-color: #222;
   z-index: 1;
   color: white;
   height: 100px;
@@ -883,7 +869,9 @@ import anime from 'animejs'
   align-content: center;
   padding: 15px;
 }
-
+a {
+  text-decoration: none;
+}
 #grid {
   display: flex;
   flex-direction: row;

@@ -1,10 +1,10 @@
 <template>
-<div class="experience">
+<div class="experience" id="experience">
 
 
   <h2 id="prof-experience" data-aos='fade-up' data-aos-duration='1350'>Professional Experience</h2>
   <div class="job-section">
-    <div class="card" data-aos='fade-up' data-aos-duration='1350' v-for="job in jobs">
+    <div class="card" data-aos='slide-up' data-aos-duration='1350' v-for="job in jobs">
       <div class="job">
         <div class="upper-card">
           <h3>{{job.title}}, {{job.company}}</h3>
@@ -30,9 +30,9 @@
   </div>
 
 
-  <h2 id="edu-experience" data-aos='fade-up' data-aos-duration='1350' data-aos-anchor=".anchor">Education</h2>
+  <h2 id="edu-experience" data-aos='fade-up' data-aos-duration='1350'>Education</h2>
   <div class="job-section">
-    <div class="card anchor" data-aos='fade-up' data-aos-duration='1350' v-for="item in education">
+    <div class="card anchor" data-aos='slide-up' data-aos-duration='1350' v-for="item in education">
       <div class="job">
         <div class="upper-card">
           <h3>{{item.title}}, {{item.school}}</h3>
@@ -59,7 +59,7 @@
 
   <h2 id="edu-experience" data-aos='fade-up' data-aos-duration='1350'>Projects</h2>
   <div class="job-section">
-    <div class="card" data-aos='fade-up' data-aos-duration='1350' v-for="item in projects">
+    <div class="card" data-aos='slide-up' data-aos-duration='1350' v-for="item in projects">
       <div class="job">
         <div class="upper-card">
           <a :href='item.link'>
@@ -207,7 +207,7 @@ export default {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   margin: 1.6rem;
   padding: 1.3rem;
   background-color: white;
@@ -249,13 +249,35 @@ export default {
   flex-wrap: wrap;
 }
 .tags p:hover {
+  background-color: salmon;
+  color: white;
+  transform: scale(1.1);
+  transition-duration: .5s;
+  border: 2px solid salmon
+}
+.tags p:nth-child(2n):hover {
   background-color: #FD5AE8;
   color: white;
   transform: scale(1.1);
   transition-duration: .5s;
+  border: 2px solid #FD5AE8
+}
+.tags p:nth-child(3n):hover {
+  background-color: #5AE8FD;
+  color: white;
+  transform: scale(1.1);
+  transition-duration: .5s;
+  border: 2px solid #5AE8FD
+}
+.tags p:nth-child(4n):hover {
+  background-color: #29fca5;
+  color: white;
+  transform: scale(1.1);
+  transition-duration: .5s;
+  border: 2px solid #29fca5
 }
 .deck {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .tags {
   display: flex;
