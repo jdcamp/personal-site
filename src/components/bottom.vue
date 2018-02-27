@@ -10,11 +10,14 @@ add link to resume download
     <h5>Download Resume</h5>
   </div>
   <div class="social">
+<a href="https://github.com/jdcamp">
     <img src="../assets/github_logo.png" alt="github logo">
+  </a>
+  <a href="https://www.linkedin.com/in/jdcampa/">
     <img src="../assets/linkedin_logo.png" alt="linkedin logo">
-    <img src="../assets/mail_logo.png" alt="mail logo">
-    <h5>Created by Jake Campa</h5>
+  </a>
   </div>
+  <h5>Created by Jake Campa</h5>
 </div>
 </template>
 
@@ -45,5 +48,8 @@ export default {
 
 .sitemap {
   align-self: center;
+}
+h5 {
+  text-align: center;
 }
 </style>

@@ -1,8 +1,10 @@
 <template>
 <div class="experience">
-  <h2 id="prof-experience">Professional Experience</h2>
+
+
+  <h2 id="prof-experience" data-aos='fade-up' data-aos-duration='1350'>Professional Experience</h2>
   <div class="job-section">
-    <div class="card" data-aos='fade-up' v-for="job in jobs">
+    <div class="card" data-aos='fade-up' data-aos-duration='1350' v-for="job in jobs">
       <div class="job">
         <div class="upper-card">
           <h3>{{job.title}}, {{job.company}}</h3>
@@ -19,51 +21,63 @@
               <img :src='job.img' class='logo'>
             </div>
           </div>
-        </div>
-        <div class="tags">
-          <h5 v-for='tag in job.tags'>{{tag}}</h5>
+          <div class="tags">
+            <p v-for='tag in job.tags'>{{tag}}</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <h2 id="edu-experience">Education</h2>
+
+
+  <h2 id="edu-experience" data-aos='fade-up' data-aos-duration='1350' data-aos-anchor=".anchor">Education</h2>
   <div class="job-section">
-    <div class="card" v-for="item in education">
+    <div class="card anchor" data-aos='fade-up' data-aos-duration='1350' v-for="item in education">
       <div class="job">
         <div class="upper-card">
           <h3>{{item.title}}, {{item.school}}</h3>
           <h3>{{item.date}}</h3>
         </div>
         <div class="lower-card" v-bind:class='"mode" + item.id % 2'>
+          <div class="test">
+
           <div class="deck">
             <p>{{item.deck}}</p>
           </div>
           <div>
             <img :src='item.img' class='logo'>
           </div>
-          <div class="tags" v-for='tag in item.tags'>
-            <h6>{{tag}}</h6>
+        </div>
+          <div class="tags">
+            <p v-for='tag in item.tags'>{{tag}}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <h2 id="edu-experience">Projects</h2>
+
+
+  <h2 id="edu-experience" data-aos='fade-up' data-aos-duration='1350'>Projects</h2>
   <div class="job-section">
-    <div class="card" v-for="item in projects">
+    <div class="card" data-aos='fade-up' data-aos-duration='1350' v-for="item in projects">
       <div class="job">
         <div class="upper-card">
-          <h3>{{item.title}}, {{item.school}}</h3>
+          <a :href='item.link'>
+          <h3>{{item.title}}</h3>
+        </a>
         </div>
         <div class="lower-card" v-bind:class='"mode" + item.id % 2'>
+          <div class="test">
+
           <div class="deck">
             <p>{{item.deck}}</p>
           </div>
           <div>
             <img :src='item.img' class='logo'>
           </div>
-          <div class="tags" v-for='tag in item.tags'>
-            <h6>{{tag}}</h6>
+        </div>
+          <div class="tags">
+            <p v-for='tag in item.tags'>{{tag}}</p>
           </div>
         </div>
       </div>
@@ -133,49 +147,37 @@ export default {
           title: 'JavaScript/PHP Track',
           school: 'Epicodus',
           date: 'January 2017 - July 2017',
-          deck: 'jkfga jdkjfgj j joifjgoidfjgaerg ergekgeirgef frgepodfin sksdn vdnxdn cvnxohn iuhbiuhn in isnfj nsdk nsd, nsduh so osij osidh lisyguydb aousidv iusyobv iyctvugb ytxdrctuvybuyvtdrx yubictruvbivtcfuvbtcruvibvtcf t byuiv vy vy vygu yguv v vygu viuyb ud biudcb ihbdbj d  dfvnhdfc nv  rf dfhnvc jnvdn df vdfijnd d',
-          img: 'http://dummyimage.com/149x120.png/ff4444/ffffff',
-          tags: ['PHP', 'MySQL', 'AWS', 'Heroku', 'HTML/JavaScript/CSS', 'WordPress']
+          deck: 'A 25 week coding bootcamp focusing on web dev technologies. ',
+          img: require('../assets/epicodus_logo.png'),
+          tags: ['PHP', 'MySQL', 'NoSQL', 'Ember', 'Drupal-7/8', 'Typescript', 'HTML/CSS/JavaScript', 'Angular',]
         },
         {
           id: 2,
           title: 'A.S., Computer Science',
           school: 'Northern Virginia Community College',
           date: 'August 2015 - December 2016',
-          deck: 'Couse work in datastructures, algorithms, object oriented programming and computer architecture',
+          deck: 'Couse work in datastructures, algorithms, object oriented programming and computer architecture.',
           img: require('../assets/nvcc_logo.jpg'),
-          tags: ['Java', 'Datastructures', '']
+          tags: ['Java', 'Datastructures']
         },
       ],
-      projects: [{
+      projects: [
+        {
           id: 1,
-          title: 'Project',
-          school: 'Link',
+          title: 'Talkers',
+          link: 'https://stalking-caf97.firebaseapp.com/',
           deck: 'jkfga jdkjfgj j joifjgoidfjgaerg ergekgeirgef frgepodfin sksdn vdnxdn cvnxohn iuhbiuhn in isnfj nsdk nsd, nsduh so osij osidh lisyguydb aousidv iusyobv iyctvugb ytxdrctuvybuyvtdrx yubictruvbivtcfuvbtcruvibvtcf t byuiv vy vy vygu yguv v vygu viuyb ud biudcb ihbdbj d  dfvnhdfc nv  rf dfhnvc jnvdn df vdfijnd d',
           img: 'http://dummyimage.com/149x120.png/ff4444/ffffff',
-          tags: ['PHP', 'MySQL', 'AWS', 'Heroku', 'HTML/JavaScript/CSS', 'WordPress']
-        },{
-            id: 2,
-            title: 'Project2',
-            school: 'Link',
-            deck: 'jkfga jdkjfgj j joifjgoidfjgaerg ergekgeirgef frgepodfin sksdn vdnxdn cvnxohn iuhbiuhn in isnfj nsdk nsd, nsduh so osij osidh lisyguydb aousidv iusyobv iyctvugb ytxdrctuvybuyvtdrx yubictruvbivtcfuvbtcruvibvtcf t byuiv vy vy vygu yguv v vygu viuyb ud biudcb ihbdbj d  dfvnhdfc nv  rf dfhnvc jnvdn df vdfijnd d',
-            img: 'http://dummyimage.com/149x120.png/ff4444/ffffff',
-            tags: ['PHP', 'MySQL', 'AWS', 'Heroku', 'HTML/JavaScript/CSS', 'WordPress']
-          },{
-            id: 3,
-            title: 'Project2',
-            school: 'Link',
-            deck: 'jkfga jdkjfgj j joifjgoidfjgaerg ergekgeirgef frgepodfin sksdn vdnxdn cvnxohn iuhbiuhn in isnfj nsdk nsd, nsduh so osij osidh lisyguydb aousidv iusyobv iyctvugb ytxdrctuvybuyvtdrx yubictruvbivtcfuvbtcruvibvtcf t byuiv vy vy vygu yguv v vygu viuyb ud biudcb ihbdbj d  dfvnhdfc nv  rf dfhnvc jnvdn df vdfijnd d',
-            img: 'http://dummyimage.com/149x120.png/ff4444/ffffff',
-            tags: ['PHP', 'MySQL', 'AWS', 'Heroku', 'HTML/JavaScript/CSS', 'WordPress']
-          },{
-            id: 4,
-            title: 'Project2',
-            school: 'Link',
-            deck: 'jkfga jdkjfgj j joifjgoidfjgaerg ergekgeirgef frgepodfin sksdn vdnxdn cvnxohn iuhbiuhn in isnfj nsdk nsd, nsduh so osij osidh lisyguydb aousidv iusyobv iyctvugb ytxdrctuvybuyvtdrx yubictruvbivtcfuvbtcruvibvtcf t byuiv vy vy vygu yguv v vygu viuyb ud biudcb ihbdbj d  dfvnhdfc nv  rf dfhnvc jnvdn df vdfijnd d',
-            img: 'http://dummyimage.com/149x120.png/ff4444/ffffff',
-            tags: ['PHP', 'MySQL', 'AWS', 'Heroku', 'HTML/JavaScript/CSS', 'WordPress']
-          },
+          tags: ['Angular', 'Firebase/NoSQL', 'HTML/JavaScript/CSS']
+        },
+        {
+          id: 2,
+          title: 'AutoBlogger WP Plugin',
+          link: 'https://github.com/jdcamp/rssfeed-wp',
+          deck: 'A Wordpress plugin that will autopost content from rss feeds at a given interval. Used to populate wordpress blog with articles about a given topic given an rss feed. Can filter based on keywords and topics for more relevent articles. Uses picoFeed for rss parsing',
+          img: require('../assets/rssfeed_logo.png'),
+          tags: ['Angular', 'Firebase/NoSQL', 'HTML/JavaScript/CSS']
+        }
       ]
     }
   }
@@ -202,12 +204,13 @@ export default {
   padding: 1.3rem;
   background-color: white;
   background-blend-mode: lighten;
-  width: 62rem;
+  width: 68rem;
+  border-radius: 7px;
 }
 
 .upper-card {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 #prof-experience,
@@ -218,31 +221,44 @@ export default {
 .mode1 {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  /* align-items: stretch; */
 }
 
 .mode0 .deck {
   display: flex;
+  align-items: stretch;
   flex-direction: row;
   order: 99;
 }
 
-.tags h5 {
-  border: 2px solid purple;
-  border-radius: 3.5px;
+.tags p {
+  border: 2px solid #FD5AE8;
+  border-radius: 5.5px;
   padding: 2px;
   margin: 2px;
+  font-size: 1.2em;
+  align-self: center;
+  flex-wrap: wrap;
 }
-
+.tags p:hover {
+  background-color: #FD5AE8;
+  color: white;
+  transform: scale(1.1);
+  transition-duration: .5s;
+}
+.deck {
+  font-size: 2rem;
+}
 .tags {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-content: center;
 }
 
 .lower-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
@@ -256,6 +272,6 @@ export default {
 }
 
 .logo {
-  height: 150px;
+  height: 175px;
 }
 </style>

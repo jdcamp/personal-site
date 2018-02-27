@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Sticky from 'sticky-js'
 
 Vue.config.productionTip = false
 

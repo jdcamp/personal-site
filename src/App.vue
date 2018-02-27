@@ -15,10 +15,14 @@ import experience from './components/experience'
 import about from './components/about'
 import bottom from './components/bottom'
 import AOS from 'aos'
+import Sticky from 'sticky-js'
 
 export default {
   created() {
     AOS.init()
+  },
+  mounted() {
+    var sticky = new Sticky('.navbar');
   },
   name: 'App',
   components:{
@@ -46,5 +50,8 @@ export default {
 body {
   /* background-color: #272727; */
   background-color: whitesmoke;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0
 }
 </style>

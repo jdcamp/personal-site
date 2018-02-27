@@ -9,27 +9,23 @@
     <p id='intro-deck'>Hello, my name is Jake Campa. I am a software engineer living in Portland, Oregon. I like to <span class="pink-accent">build</span>, <span class="teal-accent">create</span>, <span class="green-accent">break</span> and <span class="red-accent">fix</span> code.</p>
   </div>
   <div class="navbar">
-    <router-link :to="{path: '/'}" replace>
-      <h4>CHANGE TAB TITLE</h4>
-    </router-link>
-    <router-link :to="{path: '/Experience'}" replace>
+      <h4>Home</h4>
       <h4>Experience</h4>
-    </router-link>
-    <router-link :to="{path: '/About'}" replace>
       <h4>About</h4>
-    </router-link>
   </div>
 </div>
 </template>
 
 <script>
+import Sticky from 'sticky-js';
 export default {
+  mounted() {
+    var sticky = new Sticky('.navbar');
+  },
   ///////////////////
   // Testing of the name animation using anime js block of condimentum
   ///////////////////
   methods: {
-
-
     createGrid: function(callback) {
       this.$nextTick(function() {
         var grid = document.getElementById("grid");
@@ -43,10 +39,8 @@ export default {
             let unit = document.createElement("div");
             unit.classList.add('p' + xCor + yCor);
             unit.classList.add('pixel');
-            console.log(unit);
             column.appendChild(unit);
           }
-          console.log(grid)
           grid.appendChild(column);
         }
         callback()
@@ -810,38 +804,41 @@ import anime from 'animejs'
   font-size: 2em;
   color: whitesmoke;
   text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 3rem;
 }
 .navbar h4 {
-  width: 10em;
+  width: 11rem;
   text-align: center;
+  font-style: normal;
+  padding-bottom: 15px;
 }
 .navbar {
-  /* -moz-box-shadow: inset 0px 0 10px 0px #000000;
-  -webkit-box-shadow: inset 0px 0 10px 0px #000000;
-  box-shadow: inset 0px 0px 7px 0px #000000; */
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   /* background-color: #ACE3B1; */
   /* background-color: #bce8c0; */
-  font-size: 1.72em;
-}
-
-.navbar h4 {
-  height: 35px;
-  font-style: normal;
+  font-size: 2rem;
+  background-color: inherit;
+  z-index: 1;
+  color: white;
+  height: 100px;
+  padding: 1px;
 }
 
 .navigation {
   /* background-color: #D45B58; */
   /* background-color: #d77a7c; */
   background-color: #222;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   display: flex;
   flex-direction: column;
   align-content: center;
-  height: 96vh;
+  height: 72%;
   width: inherit;
+  padding-top: 15px;
 }
 
 #site-title {
