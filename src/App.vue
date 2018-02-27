@@ -21,9 +21,6 @@ export default {
   created() {
     AOS.init()
   },
-  mounted() {
-    var sticky = new Sticky('.navbar');
-  },
   name: 'App',
   components:{
     navigation,

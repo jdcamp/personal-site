@@ -17,7 +17,8 @@
     "jQuery": "^1.7.4",
     "sticky-js": "^1.2.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-scrollto": "^2.9.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

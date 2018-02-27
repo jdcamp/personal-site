@@ -9,7 +9,7 @@
     <p id='intro-deck'>Hello, my name is Jake Campa. I am a software engineer living in Portland, Oregon. I like to <span class="pink-accent">build</span>, <span class="teal-accent">create</span>, <span class="green-accent">break</span> and <span class="red-accent">fix</span> code.</p>
   </div>
   <div class="navbar">
-      <h4>Home</h4>
+      <h4  v-scroll-to='"#grid"'>Home</h4>
       <h4>Experience</h4>
       <h4>About</h4>
   </div>
@@ -18,9 +18,27 @@
 
 <script>
 import Sticky from 'sticky-js';
+import VueScrollTo from 'vue-scrollto'
 export default {
   mounted() {
     var sticky = new Sticky('.navbar');
+    var VueScrollTo = require('vue-scrollto');
+
+    var options = {
+    container: '#container',
+    easing: 'ease-in',
+    offset: -60,
+    cancelable: true,
+    onDone: function() {
+      // scrolling is done
+    },
+    onCancel: function() {
+      // scrolling has been interrupted
+    },
+    x: false,
+    y: true
+}
+var cancelScroll = VueScrollTo.scrollTo(element, duration, options)
   },
   ///////////////////
   // Testing of the name animation using anime js block of condimentum

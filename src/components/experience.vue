@@ -166,8 +166,8 @@ export default {
           id: 1,
           title: 'Talkers',
           link: 'https://stalking-caf97.firebaseapp.com/',
-          deck: 'jkfga jdkjfgj j joifjgoidfjgaerg ergekgeirgef frgepodfin sksdn vdnxdn cvnxohn iuhbiuhn in isnfj nsdk nsd, nsduh so osij osidh lisyguydb aousidv iusyobv iyctvugb ytxdrctuvybuyvtdrx yubictruvbivtcfuvbtcruvibvtcf t byuiv vy vy vygu yguv v vygu viuyb ud biudcb ihbdbj d  dfvnhdfc nv  rf dfhnvc jnvdn df vdfijnd d',
-          img: 'http://dummyimage.com/149x120.png/ff4444/ffffff',
+          deck: 'A messaging service using Angular 2, Firebase real-time database, and Google maps API. Users can see people logged in, message chains and friend requests sent by other users.',
+          img: require('../assets/talkers_logo.png'),
           tags: ['Angular', 'Firebase/NoSQL', 'HTML/JavaScript/CSS']
         },
         {
@@ -177,6 +177,14 @@ export default {
           deck: 'A Wordpress plugin that will autopost content from rss feeds at a given interval. Used to populate wordpress blog with articles about a given topic given an rss feed. Can filter based on keywords and topics for more relevent articles. Uses picoFeed for rss parsing',
           img: require('../assets/rssfeed_logo.png'),
           tags: ['Angular', 'Firebase/NoSQL', 'HTML/JavaScript/CSS']
+        },
+        {
+          id: 2,
+          title: 'Job Board Module',
+          link: 'https://github.com/jdcamp/job-board',
+          deck: 'A Drupal module that implements a job board. Allows easy implemention of a careers page for a Drupal 7 site. Comes with default categories and can add categories as needed. ',
+          img: require('../assets/rssfeed_logo.png'),
+          tags: ['PHP', 'MySQL', 'HTML/JavaScript/CSS', 'Drupal-7','SCSS']
         }
       ]
     }

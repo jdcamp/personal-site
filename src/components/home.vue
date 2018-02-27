@@ -1,5 +1,8 @@
 <template>
 <div class="home">
+  <div class="personal-img">
+
+  </div>
   <p>After spending the last few years working in the accounting field, I wanted to change to a field that focused on problem solving and </p>
   <!-- <div class="container">
     <div id='grid'></div>
