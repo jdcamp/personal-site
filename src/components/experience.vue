@@ -2,9 +2,9 @@
 <div class="experience" id="experience">
 
 
-  <h2 id="prof-experience" data-aos='fade-up' data-aos-duration='1350'>Professional Experience</h2>
+  <h2 id="prof-experience" data-aos-once="true" data-aos='fade-up' data-aos-duration='900'>Professional Experience</h2>
   <div class="job-section">
-    <div class="card" data-aos='slide-up' data-aos-duration='1350' v-for="job in jobs">
+    <div class="card" data-aos='slide-up'data-aos-once="true" data-aos-duration='900' v-for="job in jobs">
       <div class="job">
         <div class="upper-card">
           <h3>{{job.title}}, {{job.company}}</h3>
@@ -30,9 +30,9 @@
   </div>
 
 
-  <h2 id="edu-experience" data-aos='fade-up' data-aos-duration='1350'>Education</h2>
+  <h2 id="edu-experience" data-aos-once="true" data-aos='fade-up' data-aos-duration='900'>Education</h2>
   <div class="job-section">
-    <div class="card anchor" data-aos='slide-up' data-aos-duration='1350' v-for="item in education">
+    <div class="card anchor" data-aos-once="true" data-aos='slide-up' data-aos-duration='900' v-for="item in education">
       <div class="job">
         <div class="upper-card">
           <h3>{{item.title}}, {{item.school}}</h3>
@@ -57,9 +57,9 @@
   </div>
 
 
-  <h2 id="edu-experience" data-aos='fade-up' data-aos-duration='1350'>Projects</h2>
+  <h2 id="edu-experience" data-aos-once="true" data-aos='fade-up' data-aos-duration='900'>Projects</h2>
   <div class="job-section">
-    <div class="card" data-aos='slide-up' data-aos-duration='1350' v-for="item in projects">
+    <div class="card" data-aos-once="true" data-aos='slide-up' data-aos-duration='900' v-for="item in projects">
       <div class="job">
         <div class="upper-card">
           <a :href='item.link'>
@@ -198,7 +198,7 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .experience {
@@ -214,6 +214,7 @@ export default {
   background-blend-mode: lighten;
   width: 68rem;
   border-radius: 7px;
+  flex-basis: 1;
 }
 
 .upper-card {

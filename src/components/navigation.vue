@@ -809,7 +809,6 @@ import anime from 'animejs'
   font-size: 3rem;
 }
 .navbar h4 {
-  width: 11rem;
   text-align: center;
   font-style: normal;
   padding-bottom: 15px;
@@ -819,6 +818,7 @@ import anime from 'animejs'
   color: #5AE8FD
 }
 .navbar {
+  width: 100vw;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
