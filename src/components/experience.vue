@@ -44,7 +44,7 @@
           <div class="deck">
             <p>{{item.deck}}</p>
           </div>
-          <div>
+          <div class="logo-div">
             <img :src='item.img' class='logo'>
           </div>
         </div>
@@ -72,7 +72,7 @@
           <div class="deck">
             <p>{{item.deck}}</p>
           </div>
-          <div>
+          <div class="logo-div">
             <img :src='item.img' class='logo'>
           </div>
         </div>
@@ -176,10 +176,10 @@ export default {
           link: 'https://github.com/jdcamp/rssfeed-wp',
           deck: 'A Wordpress plugin that will autopost content from rss feeds at a given interval. Used to populate wordpress blog with articles about a given topic given an rss feed. Can filter based on keywords and topics for more relevent articles. Uses picoFeed for rss parsing',
           img: require('../assets/rssfeed_logo.png'),
-          tags: ['Angular', 'Firebase/NoSQL', 'HTML/JavaScript/CSS']
+          tags: ['Angular','Typescript', 'Firebase/NoSQL', 'HTML/JavaScript/CSS']
         },
         {
-          id: 2,
+          id: 3,
           title: 'Job Board Module',
           link: 'https://github.com/jdcamp/job-board',
           deck: 'A Drupal module that implements a job board. Allows easy implemention of a careers page for a Drupal 7 site. Comes with default categories and can add categories as needed. ',
@@ -241,7 +241,7 @@ export default {
 }
 
 .tags p {
-  border: 2px solid #FD5AE8;
+  border: 1px solid #FD5AE8;
   border-radius: 5.5px;
   padding: 2px;
   margin: 2px;
@@ -254,28 +254,28 @@ export default {
   color: white;
   transform: scale(1.1);
   transition-duration: .5s;
-  border: 2px solid salmon
+  border: 1px solid salmon
 }
 .tags p:nth-child(2n):hover {
   background-color: #FD5AE8;
   color: white;
   transform: scale(1.1);
   transition-duration: .5s;
-  border: 2px solid #FD5AE8
+  border: 1px solid #FD5AE8
 }
 .tags p:nth-child(3n):hover {
   background-color: #5AE8FD;
   color: white;
   transform: scale(1.1);
   transition-duration: .5s;
-  border: 2px solid #5AE8FD
+  border: 1px solid #5AE8FD
 }
 .tags p:nth-child(4n):hover {
   background-color: #29fca5;
   color: white;
   transform: scale(1.1);
   transition-duration: .5s;
-  border: 2px solid #29fca5
+  border: 1px solid #29fca5
 }
 .deck {
   font-size: 1.5rem;
@@ -304,5 +304,14 @@ export default {
 
 .logo {
   height: 175px;
+}
+@media all and (max-width: 1279px) {
+  .test {
+    flex-direction: column-reverse;
+  }
+  .logo-div {
+    order: 1;
+    align-self: center;
+  }
 }
 </style>

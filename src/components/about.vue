@@ -17,11 +17,11 @@ Praesent tristique magna sit amet purus gravida quis blandit. Faucibus turpis in
 <script>
 export default {
   name: 'about',
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  // data(){
+  //   return {
+  //     msg: 'Welcome to Your Vue.js App'
+  //   }
+  // }
 }
 </script>
 

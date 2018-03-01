@@ -1,6 +1,5 @@
 <template>
 <div class="home">
-  <div class="personal-image">
 
     <div class="personal-image">
 
@@ -13,14 +12,13 @@
          <polygon class="hex" stroke-linecap="butt" points="300,150 225,280 75,280 0,150 75,20 225,20" fill="url('#image-bg')"></polygon>
        </svg>
      </div>
-     <div class="">
+     <div class="home-summary">
        <p>After spending the last few years working in the accounting fiel</p>
      </div>
   <!-- <div class="container">
     <div id='grid'></div>
   </div> -->
 
-</div>
 </div>
 </template>
 
@@ -52,5 +50,8 @@ export default {
    justify-content: center;
    height: 25rem;
    flex-direction: column;
+ }
+ .home-summary {
+   text-align: center;
  }
 </style>
