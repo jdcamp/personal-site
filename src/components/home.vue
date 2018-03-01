@@ -13,7 +13,7 @@
        </svg>
      </div>
      <div class="home-summary">
-       <p>After spending the last few years working in the accounting fiel</p>
+       <p>I recently graduated school with a degree in computer science and attended a programming boot camp right after. I have a background in accounting and finance (I'm a wiz with excel). I highly value collaboration, continuous learning and happy hours.</p>
      </div>
   <!-- <div class="container">
     <div id='grid'></div>
@@ -42,7 +42,7 @@ export default {
 }
 .hex {
   stroke:black;
-  stroke-width:4
+  stroke-width:3
  }
  .personal-image {
    display: flex;
@@ -53,5 +53,18 @@ export default {
  }
  .home-summary {
    text-align: center;
+   font-size: 1.5em;
+   font-weight:400;
+   padding: 25px 55px 20px 20px;
+   width: 80vw;
+   margin: auto;
  }
+ .home-summary:after {
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid black; /* This creates the border. Replace black with whatever color you want. */
+}
 </style>
