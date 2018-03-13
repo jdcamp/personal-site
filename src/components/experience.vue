@@ -41,13 +41,13 @@
         <div class='lower-card' v-bind:class='"mode" + item.id % 2'>
           <div class='test'>
 
-          <div class='deck'>
-            <p>{{item.deck}}</p>
+            <div class='deck'>
+              <p>{{item.deck}}</p>
+            </div>
+            <div class='logo-div'>
+              <img :src='item.img' class='logo'>
+            </div>
           </div>
-          <div class='logo-div'>
-            <img :src='item.img' class='logo'>
-          </div>
-        </div>
           <div class='tags'>
             <p v-for='tag in item.tags'>{{tag}}</p>
           </div>
@@ -63,19 +63,19 @@
       <div class='job'>
         <div class='upper-card'>
           <a :href='item.link'>
-          <h3>{{item.title}}</h3>
-        </a>
+            <h3>{{item.title}}</h3>
+          </a>
         </div>
         <div class='lower-card' v-bind:class='"mode" + item.id % 2'>
           <div class='test'>
 
-          <div class='deck'>
-            <p>{{item.deck}}</p>
+            <div class='deck'>
+              <p>{{item.deck}}</p>
+            </div>
+            <div class='logo-div'>
+              <img :src='item.img' class='logo'>
+            </div>
           </div>
-          <div class='logo-div'>
-            <img :src='item.img' class='logo'>
-          </div>
-        </div>
           <div class='tags'>
             <p v-for='tag in item.tags'>{{tag}}</p>
           </div>
@@ -88,14 +88,9 @@
 </template>
 
 <script>
-import anime from 'animejs'
-import VueScrollShow from 'vue-scroll-show'
 export default {
   methods: {
-    // animes: function(e) {
-    //   alert('working')
-    // }
-    animes: function() {
+    animes: function () {
       let el = document.querySelectorAll('.job')
       anime({
         targets: el,
@@ -147,9 +142,9 @@ export default {
           title: 'JavaScript/PHP Track',
           school: 'Epicodus',
           date: 'January 2017 - July 2017',
-          deck: 'A 25 week coding bootcamp focusing on web dev technologies. ',
+          deck: 'A 25 week fully immersive coding bootcamp focusing on web dev technologies and practicle experience.',
           img: require('../assets/epicodus_logo.png'),
-          tags: ['PHP', 'MySQL', 'NoSQL', 'Ember', 'Drupal-7/8', 'Typescript', 'HTML/CSS/JavaScript', 'Angular',]
+          tags: ['PHP', 'MySQL', 'NoSQL', 'Ember', 'Drupal-7/8', 'Typescript', 'HTML/CSS/JavaScript', 'Angular', 'Paired Programming']
         },
         {
           id: 2,
@@ -158,17 +153,16 @@ export default {
           date: 'August 2015 - December 2016',
           deck: 'Couse work in datastructures, algorithms, object oriented programming and computer architecture.',
           img: require('../assets/nvcc_logo.jpg'),
-          tags: ['Java', 'Datastructures']
+          tags: ['Java', 'Datastructures', 'UML', 'OOP Design']
         },
       ],
-      projects: [
-        {
+      projects: [{
           id: 1,
           title: 'Talkers',
           link: 'https://stalking-caf97.firebaseapp.com/',
           deck: 'A messaging service using Angular 2, Firebase real-time database, and Google maps API. Users can see people logged in, message chains and friend requests sent by other users.',
           img: require('../assets/talkers_logo.png'),
-          tags: ['Angular', 'Firebase/NoSQL', 'HTML/JavaScript/CSS']
+          tags: ['Angular', 'Firebase/NoSQL', 'HTML/JavaScript/CSS', 'Typescript', ]
         },
         {
           id: 2,
@@ -176,7 +170,7 @@ export default {
           link: 'https://github.com/jdcamp/rssfeed-wp',
           deck: 'A Wordpress plugin that will autopost content from rss feeds at a given interval. Used to populate wordpress blog with articles about a given topic given an rss feed. Can filter based on keywords and topics for more relevent articles. Uses picoFeed for rss parsing',
           img: require('../assets/rssfeed_logo.png'),
-          tags: ['Angular','Typescript', 'Firebase/NoSQL', 'HTML/JavaScript/CSS']
+          tags: ['WordPress', 'MySQL', 'PHP', 'HTML/JavaScript/CSS',]
         },
         {
           id: 3,
@@ -184,8 +178,16 @@ export default {
           link: 'https://github.com/jdcamp/job-board',
           deck: 'A Drupal module that implements a job board. Allows easy implemention of a careers page for a Drupal 7 site. Comes with default categories and can add categories as needed. ',
           img: require('../assets/rssfeed_logo.png'),
-          tags: ['PHP', 'MySQL', 'HTML/JavaScript/CSS', 'Drupal-7','SCSS']
-        }
+          tags: ['PHP', 'MySQL', 'HTML/JavaScript/CSS', 'Drupal-7', 'SCSS']
+        },
+        {
+          id: 4,
+          title: 'Job Board Module',
+          link: 'https://github.com/jdcamp/personal-site',
+          deck: 'A Drupal module that implements a job board. Allows easy implemention of a careers page for a Drupal 7 site. Comes with default categories and can add categories as needed. ',
+          img: require('../assets/rssfeed_logo.png'),
+          tags: ['Vue', 'HTML/JavaScript/CSS', 'AnimeJS',]
+        },
       ]
     }
   }
@@ -226,7 +228,11 @@ export default {
 #edu-experience {
   text-align: center;
 }
-
+@media (min-width: 670px) {
+  .card{
+    min-width: calc(32.5% - 10px);
+  }
+}
 .mode1 {
   display: flex;
   flex-direction: row;
@@ -248,6 +254,7 @@ export default {
   font-size: 1.2rem;
   flex-wrap: nowrap;
 }
+
 .tags p:hover {
   background-color: salmon;
   color: white;
@@ -255,6 +262,7 @@ export default {
   transition-duration: .5s;
   border: 1px solid salmon
 }
+
 .tags p:nth-child(2n):hover {
   background-color: #FD5AE8;
   color: white;
@@ -262,6 +270,7 @@ export default {
   transition-duration: .5s;
   border: 1px solid #FD5AE8
 }
+
 .tags p:nth-child(3n):hover {
   background-color: #5AE8FD;
   color: white;
@@ -269,6 +278,7 @@ export default {
   transition-duration: .5s;
   border: 1px solid #5AE8FD
 }
+
 .tags p:nth-child(4n):hover {
   background-color: #29fca5;
   color: white;
@@ -276,9 +286,11 @@ export default {
   transition-duration: .5s;
   border: 1px solid #29fca5
 }
+
 .deck {
   font-size: 1.5rem;
 }
+
 .tags {
   display: inline-flex;
   flex-direction: row;
@@ -305,6 +317,7 @@ export default {
 .logo {
   height: 175px;
 }
+
 @media all and (max-width: 1279px) {
   .test {
     flex-direction: column-reverse;
@@ -313,7 +326,7 @@ export default {
     order: 1;
     align-self: center;
   }
-  .logo-div  image{
+  .logo-div image {
     height: auto;
     max-width: 175px
   }

@@ -7,7 +7,9 @@ add link to resume download
 <template>
 <div class="footer">
   <div class="sitemap">
+<a href="https://drive.google.com/file/d/1GPGXJxlf8nvrTbSr5xBlgU4Du-W0lAXX/view?usp=sharing">
     <h5>Download Resume</h5>
+  </a>
   </div>
   <div class="social">
 <a href="https://github.com/jdcamp">
@@ -31,11 +33,16 @@ export default {
 <style scoped>
 .footer {
   /* background-color: #396D74; */
-  background-color: whitesmoke;
+  background-color: #222;
   display: flex;
   flex-direction: column;
-  width: 70%;
-  margin: auto;
+  width: 100%;
+  color: white;
+  /* margin: auto; */
+}
+a {
+  color: white;
+  text-decoration: underline;
 }
 
 .social {

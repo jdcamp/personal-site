@@ -8,7 +8,7 @@
   <div class="intro">
     <p id='intro-deck'>Hello, my name is Jake Campa. I am a software engineer living in Portland, Oregon. I like to <span class="pink-accent">build</span>, <span class="teal-accent">create</span>, <span class="green-accent">break</span> and <span class="red-accent">fix</span> code.</p>
   </div>
-  <div class="navbar" data-sticky-wrap='false'>
+  <div class="navbar" id="navbar">
       <h4 v-scroll-to="'#grid'">Home</h4>
       <h4 v-scroll-to="'#experience'">Experience</h4>
       <h4 v-scroll-to="'#about'">About</h4>
@@ -21,6 +21,23 @@ import Sticky from 'sticky-js';
 export default {
   mounted() {
     var sticky = new Sticky('.navbar');
+//     window.onscroll = function() {myFunction()};
+//
+// // Get the navbar
+// var navbar = document.getElementById("navbar");
+//
+// // Get the offset position of the navbar
+// var sticky = navbar.offsetTop;
+// console.log(sticky);
+//
+// // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky")
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+// }
   },
   ///////////////////
   // Animation
@@ -812,26 +829,32 @@ import anime from 'animejs'
   text-align: center;
   font-style: normal;
   padding-bottom: 15px;
+  font-size: 1.5rem;
 }
 .navbar h4:hover {
   cursor: pointer;
   color: #5AE8FD
 }
 .navbar {
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-direction: row;
+  overflow: hidden;
   /* background-color: #ACE3B1; */
   /* background-color: #bce8c0; */
   font-size: 2rem;
   background-color: #222;
   z-index: 1;
   color: white;
-  height: 100px;
-  padding: 1px;
+  height: 70px;
 }
-
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
 .navigation {
   /* background-color: #D45B58; */
   /* background-color: #d77a7c; */
@@ -841,10 +864,12 @@ import anime from 'animejs'
   flex-direction: column;
   align-content: center;
   height: 72%;
-  width: inherit;
+  /* width: inherit; */
   padding-top: 15px;
 }
-
+.sticky + .content {
+  padding-top: 35px;
+}
 #site-title {
   text-align: center;
   padding-top: 8px;

@@ -1,10 +1,13 @@
 <template>
   <div id="app">
     <navigation></navigation>
+    <div class="content">
+
     <home></home>
     <experience></experience>
     <about></about>
     <bottom></bottom>
+  </div>
   </div>
 </template>
 
@@ -50,6 +53,7 @@ body {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
+  margin-bottom: 0;
   display: block;
 }
 </style>
