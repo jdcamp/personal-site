@@ -182,10 +182,10 @@ export default {
         },
         {
           id: 4,
-          title: 'Job Board Module',
+          title: 'Personal Site',
           link: 'https://github.com/jdcamp/personal-site',
-          deck: 'A Drupal module that implements a job board. Allows easy implemention of a careers page for a Drupal 7 site. Comes with default categories and can add categories as needed. ',
-          img: require('../assets/rssfeed_logo.png'),
+          deck: 'Your looking at it. Built with Vuejs, express, and webpack',
+          img: require('../assets/personal_site_logo.png'),
           tags: ['Vue', 'HTML/JavaScript/CSS', 'AnimeJS',]
         },
       ]
