@@ -184,7 +184,7 @@ export default {
           id: 4,
           title: 'Personal Site',
           link: 'https://github.com/jdcamp/personal-site',
-          deck: 'Your looking at it. Built with Vuejs, express, and webpack',
+          deck: 'You are looking at it. Built with Vuejs, express, and webpack.',
           img: require('../assets/personal_site_logo.png'),
           tags: ['Vue', 'HTML/JavaScript/CSS', 'AnimeJS',]
         },
