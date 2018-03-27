@@ -11,7 +11,7 @@
           <h3>{{job.date}}</h3>
         </div>
         <div class='lower-card' v-bind:class='"mode" + job.id % 2'>
-          <div class='test'>
+          <div class='lower-card-container'>
             <ul>
               <div class='deck' v-for='point in job.deck'>
                 <li>{{point}}</li>
@@ -39,7 +39,7 @@
           <h3>{{item.date}}</h3>
         </div>
         <div class='lower-card' v-bind:class='"mode" + item.id % 2'>
-          <div class='test'>
+          <div class='lower-card-container'>
 
             <div class='deck'>
               <p>{{item.deck}}</p>
@@ -67,7 +67,7 @@
           </a>
         </div>
         <div class='lower-card' v-bind:class='"mode" + item.id % 2'>
-          <div class='test'>
+          <div class='lower-card-container'>
 
             <div class='deck'>
               <p>{{item.deck}}</p>
@@ -249,7 +249,7 @@ export default {
 .tags p {
   border: 1px solid #FD5AE8;
   border-radius: 5.5px;
-  padding: 2px;
+  padding: 2px 6px;
   margin: 2px;
   font-size: 1.2rem;
   flex-wrap: nowrap;
@@ -258,32 +258,24 @@ export default {
 .tags p:hover {
   background-color: salmon;
   color: white;
-  transform: scale(1.1);
-  transition-duration: .5s;
   border: 1px solid salmon
 }
 
 .tags p:nth-child(2n):hover {
   background-color: #FD5AE8;
   color: white;
-  transform: scale(1.1);
-  transition-duration: .5s;
   border: 1px solid #FD5AE8
 }
 
 .tags p:nth-child(3n):hover {
   background-color: #5AE8FD;
   color: white;
-  transform: scale(1.1);
-  transition-duration: .5s;
   border: 1px solid #5AE8FD
 }
 
 .tags p:nth-child(4n):hover {
   background-color: #29fca5;
   color: white;
-  transform: scale(1.1);
-  transition-duration: .5s;
   border: 1px solid #29fca5
 }
 
@@ -305,7 +297,7 @@ export default {
   flex-wrap: wrap;
 }
 
-.test {
+.lower-card-container {
   display: flex;
   flex-direction: row;
 }
@@ -319,7 +311,7 @@ export default {
 }
 
 @media all and (max-width: 1279px) {
-  .test {
+  .lower-card-container {
     flex-direction: column-reverse;
   }
   .logo-div {
