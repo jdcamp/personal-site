@@ -1,7 +1,6 @@
 <template>
 <div class='experience' id='experience'>
 
-
   <h2 id='prof-experience' data-aos-once='true' data-aos='fade-up' data-aos-duration='560'>Professional Experience</h2>
   <div class='job-section'>
     <div class='card' data-aos='fade-up' data-aos-once='true' data-aos-duration='560' v-for='job in jobs'>
@@ -29,7 +28,6 @@
     </div>
   </div>
 
-
   <h2 id='edu-experience' data-aos-once='true' data-aos='fade-up' data-aos-duration='560'>Education</h2>
   <div class='job-section'>
     <div class='card anchor' data-aos-once='true' data-aos='fade-up' data-aos-duration='560' v-for='item in education'>
@@ -55,7 +53,6 @@
       </div>
     </div>
   </div>
-
 
   <h2 id='edu-experience' data-aos-once='true' data-aos='fade-up' data-aos-duration='560'>Projects</h2>
   <div class='job-section'>
@@ -95,13 +92,13 @@ export default {
       anime({
         targets: el,
         translateX: [{
-            value: 100,
-            duration: 1200
-          },
-          {
-            value: 0,
-            duration: 800
-          }
+          value: 100,
+          duration: 1200
+        },
+        {
+          value: 0,
+          duration: 800
+        }
         ],
         rotate: '1turn',
         backgroundColor: '#FFF',
@@ -110,7 +107,7 @@ export default {
       })
     }
   },
-  data() {
+  data () {
     return {
       name: 'experience',
       jobs: [{
@@ -136,58 +133,58 @@ export default {
         ],
         img: require('../assets/rocketml_logo.png'),
         tags: ['PHP', 'MySQL', 'AWS', 'Heroku', 'HTML/JavaScript/CSS', 'WordPress']
-      }, ],
+      } ],
       education: [{
-          id: 1,
-          title: 'JavaScript/PHP Track',
-          school: 'Epicodus',
-          date: 'January 2017 - July 2017',
-          deck: 'A 25 week fully immersive coding bootcamp focusing on web dev technologies and practicle experience.',
-          img: require('../assets/epicodus_logo.png'),
-          tags: ['PHP', 'MySQL', 'NoSQL', 'Ember', 'Drupal-7/8', 'Typescript', 'HTML/CSS/JavaScript', 'Angular', 'Paired Programming']
-        },
-        {
-          id: 2,
-          title: 'A.S., Computer Science',
-          school: 'Northern Virginia Community College',
-          date: 'August 2015 - December 2016',
-          deck: 'Couse work in datastructures, algorithms, object oriented programming and computer architecture.',
-          img: require('../assets/nvcc_logo.jpg'),
-          tags: ['Java', 'Datastructures', 'UML', 'OOP Design']
-        },
+        id: 1,
+        title: 'JavaScript/PHP Track',
+        school: 'Epicodus',
+        date: 'January 2017 - July 2017',
+        deck: 'A 25 week fully immersive coding bootcamp focusing on web dev technologies and practicle experience.',
+        img: require('../assets/epicodus_logo.png'),
+        tags: ['PHP', 'MySQL', 'NoSQL', 'Ember', 'Drupal-7/8', 'Typescript', 'HTML/CSS/JavaScript', 'Angular', 'Paired Programming']
+      },
+      {
+        id: 2,
+        title: 'A.S., Computer Science',
+        school: 'Northern Virginia Community College',
+        date: 'August 2015 - December 2016',
+        deck: 'Couse work in datastructures, algorithms, object oriented programming and computer architecture.',
+        img: require('../assets/nvcc_logo.jpg'),
+        tags: ['Java', 'Datastructures', 'UML', 'OOP Design']
+      }
       ],
       projects: [{
-          id: 1,
-          title: 'Talkers',
-          link: 'https://stalking-caf97.firebaseapp.com/',
-          deck: 'A messaging service using Angular 2, Firebase real-time database, and Google maps API. Users can see people logged in, message chains and friend requests sent by other users.',
-          img: require('../assets/talkers_logo.png'),
-          tags: ['Angular', 'Firebase/NoSQL', 'HTML/JavaScript/CSS', 'Typescript', ]
-        },
-        {
-          id: 2,
-          title: 'AutoBlogger WP Plugin',
-          link: 'https://github.com/jdcamp/rssfeed-wp',
-          deck: 'A Wordpress plugin that will autopost content from rss feeds at a given interval. Used to populate wordpress blog with articles about a given topic given an rss feed. Can filter based on keywords and topics for more relevent articles. Uses picoFeed for rss parsing',
-          img: require('../assets/rssfeed_logo.png'),
-          tags: ['WordPress', 'MySQL', 'PHP', 'HTML/JavaScript/CSS',]
-        },
-        {
-          id: 3,
-          title: 'Job Board Module',
-          link: 'https://github.com/jdcamp/job-board',
-          deck: 'A Drupal module that implements a job board. Allows easy implemention of a careers page for a Drupal 7 site. Comes with default categories and can add categories as needed. ',
-          img: require('../assets/rssfeed_logo.png'),
-          tags: ['PHP', 'MySQL', 'HTML/JavaScript/CSS', 'Drupal-7', 'SCSS']
-        },
-        {
-          id: 4,
-          title: 'Personal Site',
-          link: 'https://github.com/jdcamp/personal-site',
-          deck: 'You are looking at it. Built with Vuejs, express, and webpack.',
-          img: require('../assets/personal_site_logo.png'),
-          tags: ['Vue', 'HTML/JavaScript/CSS', 'AnimeJS',]
-        },
+        id: 1,
+        title: 'Talkers',
+        link: 'https://stalking-caf97.firebaseapp.com/',
+        deck: 'A messaging service using Angular 2, Firebase real-time database, and Google maps API. Users can see people logged in, message chains and friend requests sent by other users.',
+        img: require('../assets/talkers_logo.png'),
+        tags: ['Angular', 'Firebase/NoSQL', 'HTML/JavaScript/CSS', 'Typescript' ]
+      },
+      {
+        id: 2,
+        title: 'AutoBlogger WP Plugin',
+        link: 'https://github.com/jdcamp/rssfeed-wp',
+        deck: 'A Wordpress plugin that will autopost content from rss feeds at a given interval. Used to populate wordpress blog with articles about a given topic given an rss feed. Can filter based on keywords and topics for more relevent articles. Uses picoFeed for rss parsing',
+        img: require('../assets/rssfeed_logo.png'),
+        tags: ['WordPress', 'MySQL', 'PHP', 'HTML/JavaScript/CSS']
+      },
+      {
+        id: 3,
+        title: 'Job Board Module',
+        link: 'https://github.com/jdcamp/job-board',
+        deck: 'A Drupal module that implements a job board. Allows easy implemention of a careers page for a Drupal 7 site. Comes with default categories and can add categories as needed. ',
+        img: require('../assets/rssfeed_logo.png'),
+        tags: ['PHP', 'MySQL', 'HTML/JavaScript/CSS', 'Drupal-7', 'SCSS']
+      },
+      {
+        id: 4,
+        title: 'Personal Site',
+        link: 'https://github.com/jdcamp/personal-site',
+        deck: 'You are looking at it. Built with Vuejs, express, and webpack.',
+        img: require('../assets/personal_site_logo.png'),
+        tags: ['Vue', 'HTML/JavaScript/CSS', 'AnimeJS']
+      }
       ]
     }
   }
@@ -258,24 +255,28 @@ export default {
 .tags p:hover {
   background-color: salmon;
   color: white;
+  transition-duration: .5s;
   border: 1px solid salmon
 }
 
 .tags p:nth-child(2n):hover {
   background-color: #FD5AE8;
   color: white;
+  transition-duration: .5s;
   border: 1px solid #FD5AE8
 }
 
 .tags p:nth-child(3n):hover {
   background-color: #5AE8FD;
   color: white;
+  transition-duration: .5s;
   border: 1px solid #5AE8FD
 }
 
 .tags p:nth-child(4n):hover {
   background-color: #29fca5;
   color: white;
+  transition-duration: .5s;
   border: 1px solid #29fca5
 }
 

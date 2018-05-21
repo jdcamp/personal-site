@@ -1,9 +1,3 @@
-<!--
-todo
-Add links to social buttons
-add link to resume download
- -->
-
 <template>
 <div class="footer">
   <div class="sitemap">

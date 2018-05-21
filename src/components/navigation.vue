@@ -17,57 +17,57 @@
 </template>
 
 <script>
-import Sticky from 'sticky-js';
+import Sticky from 'sticky-js'
 export default {
-  mounted() {
-    var sticky = new Sticky('.navbar');
-//     window.onscroll = function() {myFunction()};
-//
-// // Get the navbar
-// var navbar = document.getElementById("navbar");
-//
-// // Get the offset position of the navbar
-// var sticky = navbar.offsetTop;
-// console.log(sticky);
-//
-// // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-// }
+  mounted () {
+    var sticky = new Sticky('.navbar')
+    //     window.onscroll = function() {myFunction()};
+    //
+    // // Get the navbar
+    // var navbar = document.getElementById("navbar");
+    //
+    // // Get the offset position of the navbar
+    // var sticky = navbar.offsetTop;
+    // console.log(sticky);
+    //
+    // // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    // function myFunction() {
+    //   if (window.pageYOffset >= sticky) {
+    //     navbar.classList.add("sticky")
+    //   } else {
+    //     navbar.classList.remove("sticky");
+    //   }
+    // }
   },
-  ///////////////////
+  /// ////////////////
   // Animation
-  ///////////////////
+  /// ////////////////
   methods: {
-    createGrid: function(callback) {
-      this.$nextTick(function() {
-        var grid = document.getElementById("grid");
+    createGrid: function (callback) {
+      this.$nextTick(function () {
+        var grid = document.getElementById('grid')
         for (let i = 0; i < 10; i++) {
-          let column = document.createElement("div");
-          let xCor = i.toString();
-          column.classList.add("column" + xCor);
-          column.classList.add("column");
+          let column = document.createElement('div')
+          let xCor = i.toString()
+          column.classList.add('column' + xCor)
+          column.classList.add('column')
           for (let j = 0; j < 10; j++) {
-            let yCor = j.toString();
-            let unit = document.createElement("div");
-            unit.classList.add('p' + xCor + yCor);
-            unit.classList.add('pixel');
-            column.appendChild(unit);
+            let yCor = j.toString()
+            let unit = document.createElement('div')
+            unit.classList.add('p' + xCor + yCor)
+            unit.classList.add('pixel')
+            column.appendChild(unit)
           }
-          grid.appendChild(column);
+          grid.appendChild(column)
         }
         callback()
       })
     },
 
-    movePixels: function() {
-      let initialColorRed = '#BF4D46';
-      let initialColorBlue = '#92D9E7';
-      let initialColorBlack = '#000';
+    movePixels: function () {
+      let initialColorRed = '#BF4D46'
+      let initialColorBlue = '#92D9E7'
+      let initialColorBlack = '#000'
       let coordinates = {
         p00: {
           x1: 2,
@@ -768,7 +768,7 @@ export default {
           x2: 17,
           y2: 2,
           color: initialColorRed
-        },
+        }
       }
       for (let cor in coordinates) {
         let pX1 = coordinates[cor].x1
@@ -779,30 +779,30 @@ export default {
         let yOffset = parseInt(cor.substring(2, 3))
         let delay1 = 3000
         let duration1 = 5000
-        let startingColor= coordinates[cor].color
+        let startingColor = coordinates[cor].color
         let pixel = '.' + cor
         anime({
           targets: pixel,
           translateX: [
-            {value:15 * (pX1 - xOffset)-18*15, duration: duration1, delay: delay1, elasticity: function() {return anime.random(50, 200)}},
-            {value:15 * (pX2 - xOffset)-4*15, duration: duration1, delay: delay1, elasticity: function() {return anime.random(50, 200)}},
+            {value: 15 * (pX1 - xOffset) - 18 * 15, duration: duration1, delay: delay1, elasticity: function () { return anime.random(50, 200) }},
+            {value: 15 * (pX2 - xOffset) - 4 * 15, duration: duration1, delay: delay1, elasticity: function () { return anime.random(50, 200) }}
           ],
           translateY: [
-            {value: 15 * (pY1 - yOffset), duration: duration1, delay: delay1, elasticity: function() {return anime.random(50, 200)}},
-            {value: 15 * (pY2 -yOffset), duration: duration1, delay: delay1, elasticity: function() {return anime.random(50, 200)}},
+            {value: 15 * (pY1 - yOffset), duration: duration1, delay: delay1, elasticity: function () { return anime.random(50, 200) }},
+            {value: 15 * (pY2 - yOffset), duration: duration1, delay: delay1, elasticity: function () { return anime.random(50, 200) }}
           ],
-          backgroundColor: [startingColor, '#FFF','#40814A'],
-          duration: (duration1 +delay1)*2,
+          backgroundColor: [startingColor, '#FFF', '#40814A'],
+          duration: (duration1 + delay1) * 2,
           // delay: function() {return anime.random(890,1600);},
           // duration: function() {return anime.random(2000,7000);},
-          borderRadius:[2, 5, 5],
+          borderRadius: [2, 5, 5]
         })
       }
     }
   },
 
   name: 'navigation',
-  data() {
+  data () {
     return {}
   }
 }

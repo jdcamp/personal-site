@@ -4,7 +4,7 @@
     <svg id="image-fill" xmlns="http://www.w3.org/2000/svg" version="1.1" height="300" xmlns:xlink="http://www.w3.org/1999/xlink">
          <defs>
           <pattern id="image-bg" x="0" y="0" height="300" width="300" patternUnits="userSpaceOnUse">
-            <image width="300" height="300" xlink:href="https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAA0OAAAAJDEzYWFiZGMzLTcwNTItNGNhYS1hMzI2LTRjMjU0YTY2Nzc3Mg.jpg"></image>
+            <image width="300" height="300" xlink:href="https://media.licdn.com/dms/image/C4D03AQEBLHQLsWDbEg/profile-displayphoto-shrink_200_200/0?e=1532563200&v=beta&t=tuJ2jsYIaXZhcAHGzBsnz2bYusrMOFVOX9b3uLzhiKU"></image>
          </pattern>
          </defs>
          <polygon class="hex" stroke-linecap="butt" points="300,150 225,280 75,280 0,150 75,20 225,20" fill="url('#image-bg')"></polygon>
@@ -19,7 +19,7 @@
 <script>
 export default {
   name: 'home',
-  data() {
+  data () {
     return {}
   }
 }
