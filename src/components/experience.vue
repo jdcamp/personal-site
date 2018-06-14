@@ -124,7 +124,7 @@ export default {
         tags: ['Excel', 'Payroll', 'Contract Pricing', 'Financial Forcasting']
       }, {
         id: 2,
-        title: 'Intern',
+        title: 'Full Stack Web Developer Intern',
         company: 'RocketML',
         date: 'June 2017 - July 2017',
         deck: ['Ported entire legacy website to WordPress and developed new, custom theme template', 'Plan, manage, and coordinate work between another intern in a remote environment',

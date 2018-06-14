@@ -11,7 +11,7 @@
        </svg>
   </div>
   <div class="home-summary">
-    <p>I recently graduated school with a degree in computer science and attended a programming boot camp right after. I have a background in accounting and finance (I'm a wiz with excel). I highly value collaboration, continuous learning and happy hours.</p>
+    <p>Web developer with practical and theoretical knowledge of programming.  Experienced with PHP, WordPress, Drupal, NodeJS, VueJS.  Interested in using technology to solve business problems. I highly value collaboration, continuous learning and happy hours.</p>
   </div>
 </div>
 </template>
