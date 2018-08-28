@@ -3,9 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Sticky from 'sticky-js'
 import vueScrollto from 'vue-scrollto'
 Vue.config.productionTip = false
 Vue.use(vueScrollto)
@@ -16,4 +14,3 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
-Vue.dire

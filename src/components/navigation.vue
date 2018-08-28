@@ -1,17 +1,17 @@
 <template>
-<div class="navigation">
-  <div class="container">
-    <div id="grid">
+<div class='navigation'>
+  <div class='container'>
+    <div id='grid'>
       {{ createGrid(movePixels) }}
     </div>
   </div>
-  <div class="intro">
-    <p id='intro-deck'>Hello, my name is Jake Campa. I am a software engineer living in Portland, Oregon. I like to <span class="pink-accent">build</span>, <span class="teal-accent">create</span>, <span class="green-accent">break</span> and <span class="red-accent">fix</span> code.</p>
+  <div class='intro'>
+    <p id='intro-deck'>Hello, my name is Jake Campa. I am a software engineer living in Portland, Oregon. I like to <span class='pink-accent'>build</span>, <span class='teal-accent'>create</span>, <span class='green-accent'>break</span> and <span class='red-accent'>fix</span> code.</p>
   </div>
-  <div class="navbar" id="navbar">
-      <h4 v-scroll-to="'#grid'">Home</h4>
-      <h4 v-scroll-to="'#experience'">Experience</h4>
-      <h4 v-scroll-to="'#about'">About</h4>
+  <div class='navbar' id='navbar'>
+      <h4 v-scroll-to='"#grid"'>Home</h4>
+      <h4 v-scroll-to='"#experience"'>Experience</h4>
+      <h4 v-scroll-to='"#about"'>About</h4>
   </div>
 </div>
 </template>
@@ -19,8 +19,8 @@
 <script>
 import Sticky from 'sticky-js'
 export default {
-  mounted () {
-    var sticky = new Sticky('.navbar')
+  mounted() {
+    var sticky = new Sticky('.navbar');
     //     window.onscroll = function() {myFunction()};
     //
     // // Get the navbar
@@ -43,31 +43,31 @@ export default {
   // Animation
   /// ////////////////
   methods: {
-    createGrid: function (callback) {
-      this.$nextTick(function () {
-        var grid = document.getElementById('grid')
+    createGrid: function(callback) {
+      this.$nextTick(function() {
+        var grid = document.getElementById("grid");
         for (let i = 0; i < 10; i++) {
-          let column = document.createElement('div')
-          let xCor = i.toString()
-          column.classList.add('column' + xCor)
-          column.classList.add('column')
+          let column = document.createElement("div");
+          let xCor = i.toString();
+          column.classList.add("column" + xCor);
+          column.classList.add("column");
           for (let j = 0; j < 10; j++) {
-            let yCor = j.toString()
-            let unit = document.createElement('div')
-            unit.classList.add('p' + xCor + yCor)
-            unit.classList.add('pixel')
-            column.appendChild(unit)
+            let yCor = j.toString();
+            let unit = document.createElement("div");
+            unit.classList.add("p" + xCor + yCor);
+            unit.classList.add("pixel");
+            column.appendChild(unit);
           }
-          grid.appendChild(column)
+          grid.appendChild(column);
         }
-        callback()
-      })
+        callback();
+      });
     },
 
-    movePixels: function () {
-      let initialColorRed = '#BF4D46'
-      let initialColorBlue = '#92D9E7'
-      let initialColorBlack = '#000'
+    movePixels: function() {
+      let initialColorRed = "#BF4D46";
+      let initialColorBlue = "#92D9E7";
+      let initialColorBlack = "#000";
       let coordinates = {
         p00: {
           x1: 2,
@@ -769,44 +769,72 @@ export default {
           y2: 2,
           color: initialColorRed
         }
-      }
+      };
       for (let cor in coordinates) {
-        let pX1 = coordinates[cor].x1
-        let pY1 = coordinates[cor].y1
-        let pX2 = coordinates[cor].x2
-        let pY2 = coordinates[cor].y2
-        let xOffset = parseInt(cor.substring(1, 2))
-        let yOffset = parseInt(cor.substring(2, 3))
-        let delay1 = 3000
-        let duration1 = 5000
-        let startingColor = coordinates[cor].color
-        let pixel = '.' + cor
+        let pX1 = coordinates[cor].x1;
+        let pY1 = coordinates[cor].y1;
+        let pX2 = coordinates[cor].x2;
+        let pY2 = coordinates[cor].y2;
+        let xOffset = parseInt(cor.substring(1, 2));
+        let yOffset = parseInt(cor.substring(2, 3));
+        let delay1 = 3000;
+        let duration1 = 5000;
+        let startingColor = coordinates[cor].color;
+        let pixel = "." + cor;
         anime({
           targets: pixel,
           translateX: [
-            {value: 15 * (pX1 - xOffset) - 18 * 15, duration: duration1, delay: delay1, elasticity: function () { return anime.random(50, 200) }},
-            {value: 15 * (pX2 - xOffset) - 4 * 15, duration: duration1, delay: delay1, elasticity: function () { return anime.random(50, 200) }}
+            {
+              value: 15 * (pX1 - xOffset) - 18 * 15,
+              duration: duration1,
+              delay: delay1,
+              elasticity: function() {
+                return anime.random(50, 200);
+              }
+            },
+            {
+              value: 15 * (pX2 - xOffset) - 4 * 15,
+              duration: duration1,
+              delay: delay1,
+              elasticity: function() {
+                return anime.random(50, 200);
+              }
+            }
           ],
           translateY: [
-            {value: 15 * (pY1 - yOffset), duration: duration1, delay: delay1, elasticity: function () { return anime.random(50, 200) }},
-            {value: 15 * (pY2 - yOffset), duration: duration1, delay: delay1, elasticity: function () { return anime.random(50, 200) }}
+            {
+              value: 15 * (pY1 - yOffset),
+              duration: duration1,
+              delay: delay1,
+              elasticity: function() {
+                return anime.random(50, 200);
+              }
+            },
+            {
+              value: 15 * (pY2 - yOffset),
+              duration: duration1,
+              delay: delay1,
+              elasticity: function() {
+                return anime.random(50, 200);
+              }
+            }
           ],
-          backgroundColor: [startingColor, '#FFF', '#40814A'],
+          backgroundColor: [startingColor, "#FFF", "#40814A"],
           duration: (duration1 + delay1) * 2,
           // delay: function() {return anime.random(890,1600);},
           // duration: function() {return anime.random(2000,7000);},
           borderRadius: [2, 5, 5]
-        })
+        });
       }
     }
   },
 
-  name: 'navigation',
-  data () {
-    return {}
+  name: "navigation",
+  data() {
+    return {};
   }
-}
-import anime from 'animejs'
+};
+import anime from "animejs";
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -833,7 +861,7 @@ import anime from 'animejs'
 }
 .navbar h4:hover {
   cursor: pointer;
-  color: #5AE8FD
+  color: #5ae8fd;
 }
 .navbar {
   /* width: 100vw; */
@@ -853,7 +881,7 @@ import anime from 'animejs'
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
 }
 .navigation {
   /* background-color: #D45B58; */
@@ -876,13 +904,13 @@ import anime from 'animejs'
 }
 
 .pink-accent {
-  color: #FD5AE8;
+  color: #fd5ae8;
 }
 .teal-accent {
-  color: #5AE8FD
+  color: #5ae8fd;
 }
 .green-accent {
-  color: #29fca5
+  color: #29fca5;
 }
 .red-accent {
   color: salmon;

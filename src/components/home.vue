@@ -1,14 +1,15 @@
 <template>
 <div class="home">
   <div class="personal-image">
-    <svg id="image-fill" xmlns="http://www.w3.org/2000/svg" version="1.1" height="300" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- <svg id="image-fill" xmlns="http://www.w3.org/2000/svg" version="1.1" height="300" xmlns:xlink="http://www.w3.org/1999/xlink">
          <defs>
           <pattern id="image-bg" x="0" y="0" height="300" width="300" patternUnits="userSpaceOnUse">
-            <image width="300" height="300" xlink:href="https://media.licdn.com/dms/image/C4D03AQEBLHQLsWDbEg/profile-displayphoto-shrink_200_200/0?e=1532563200&v=beta&t=tuJ2jsYIaXZhcAHGzBsnz2bYusrMOFVOX9b3uLzhiKU"></image>
+            <img width="300" height="300" src='../assets/headphoto.jpeg' />
          </pattern>
          </defs>
          <polygon class="hex" stroke-linecap="butt" points="300,150 225,280 75,280 0,150 75,20 225,20" fill="url('#image-bg')"></polygon>
-       </svg>
+       </svg> -->
+       <img src="../assets/headphoto.jpeg" alt="">
   </div>
   <div class="home-summary">
     <p>Web developer with practical and theoretical knowledge of programming.  Experienced with PHP, WordPress, Drupal, NodeJS, VueJS.  Interested in using technology to solve business problems. I highly value collaboration, continuous learning and happy hours.</p>
@@ -42,6 +43,10 @@ export default {
   justify-content: center;
   height: 25rem;
   flex-direction: column;
+}
+.personal-image img {
+  height: 340px;
+  border-radius: 110px
 }
 
 .home-summary {

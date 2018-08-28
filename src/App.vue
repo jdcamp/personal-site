@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id='app'>
     <navigation></navigation>
-    <div class="content">
+    <div class='content'>
 
     <home></home>
     <experience></experience>
@@ -12,27 +12,26 @@
 </template>
 
 <script>
-import navigation from './components/navigation'
-import home from './components/home'
-import experience from './components/experience'
-import about from './components/about'
-import bottom from './components/bottom'
-import AOS from 'aos'
-import Sticky from 'sticky-js'
+import navigation from './components/navigation';
+import home from './components/home';
+import experience from './components/experience';
+import about from './components/about';
+import bottom from './components/bottom';
+import AOS from 'aos';
 
 export default {
   created() {
     AOS.init();
   },
   name: 'App',
-  components:{
+  components: {
     navigation,
     bottom,
     about,
     experience,
-    home,
+    home
   }
-}
+};
 </script>
 
 <style>
