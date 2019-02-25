@@ -118,7 +118,7 @@ export default {
           id: 1,
           title: "Web Developer",
           company: "Diade Innovations",
-          date: "February 2018 - August 2018",
+          date: "February 2018 - Present",
           img: require("../assets/di_logo.png"),
           deck: [
             "Create business dashboards for clients using Vue",
